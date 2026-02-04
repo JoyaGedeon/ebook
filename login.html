@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ebook Library</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-bg">
+    <div class="page-loader" id="pageLoader"><div class="spinner"></div></div>
+    <nav class="auth-navbar">
+        <img title="logo" src="/assets/Logo.png" />
+        <span class="logo" data-i18n="appName">Ebook Library</span>
+        <div id="langSelector"></div>
+    </nav>
+
+    <div class="container">
+        <div class="auth-card">
+            <h1 data-i18n="loginTitle">Login / Sign Up</h1>
+            <p data-i18n="loginSubtitle">Enter your phone number to get the PIN code</p>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <div class="phone-input-wrapper">
+                        <span class="phone-prefix" id="phonePrefix">+1</span>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            data-i18n-placeholder="phonePlaceholder"
+                            placeholder="234 567 8900"
+                            required
+                        >
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary anim" data-i18n="sendOtp">Continue</button>
+            </form>
+
+            <p class="error-message" id="errorMessage"></p>
+
+            <div class="auth-info">
+                <ul>
+                    <li data-i18n="authInfoWelcome">Welcome to "E-Book"</li>
+                    <li data-i18n="authInfoTrial">First 3 days free trial for new users, then subscription</li>
+                    <li data-i18n="authInfoCancel">You can cancel your subscription at any time</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <span data-i18n="copyright">© Copyright 2026 E-Book</span>
+        <div class="footer-links">
+            <a href="docs/terms-of-use.pdf" data-i18n="termsOfUse">Terms of Use</a>
+            <span class="separator">-</span>
+            <a href="docs/privacy-policy.pdf" data-i18n="privacyPolicy">Privacy Policy</a>
+            <span class="separator">-</span>
+            <a href="docs/cookie-policy.pdf" data-i18n="cookiePolicy">Cookie Policy</a>
+        </div>
+    </footer>
+
+    <script src="js/loader.js"></script>
+    <script src="js/lang.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        // Add language selector
+        document.getElementById('langSelector').innerHTML = createLangSelector();
+        applyTranslations();
+
+        // Redirect to home if already logged in
+        redirectIfLoggedIn();
+
+        const phoneInput = document.getElementById('phone');
+        const prefixEl = document.getElementById('phonePrefix');
+
+        // Strip non-digits as user types
+        phoneInput.addEventListener('input', () => {
+            phoneInput.value = phoneInput.value.replace(/\D/g, '');
+        });
+
+        // Set maxlength based on current prefix
+        function updatePhoneMaxLength() {
+            const prefix = prefixEl.textContent;
+            const maxLen = PHONE_LENGTHS[prefix] || 15;
+            phoneInput.maxLength = maxLen;
+        }
+        updatePhoneMaxLength();
+
+        // Re-apply maxlength when language changes
+        const origSetLang = setLang;
+        setLang = function(lang) {
+            origSetLang(lang);
+            updatePhoneMaxLength();
+        };
+
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const prefix = prefixEl.textContent;
+            const digits = phoneInput.value.replace(/\D/g, '');
+            const expectedLen = PHONE_LENGTHS[prefix];
+            const errorEl = document.getElementById('errorMessage');
+
+            if (expectedLen && digits.length !== expectedLen) {
+                errorEl.textContent = t('phoneInvalid').replace('{n}', expectedLen);
+                return;
+            }
+
+            const phone = prefix + digits;
+
+            try {
+                errorEl.textContent = '';
+                await sendOTP(phone);
+                sessionStorage.setItem('pendingPhone', phone);
+                navigateTo('otp.html');
+            } catch (error) {
+                errorEl.textContent = error.message || t('otpFailed');
+            }
+        });
+    </script>
+</body>
+</html>

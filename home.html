@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - Ebook Library</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div class="page-loader" id="pageLoader"><div class="spinner"></div></div>
+        <header class="header">
+            <div class="header-content">
+                <div class="header-block">
+                    <img class="logo" title="logo" src="/assets/Logo.png" />
+                    <h1 class="header-logo" data-i18n="appName"></h1>
+                </div>
+
+                <nav class="header-nav">
+                    <a href="#books" class="nav-link" data-i18n="booksTitle">Books</a>
+                    <a href="#news" class="nav-link" data-i18n="newsTitle">News</a>
+                    <a href="#library" class="nav-link" data-i18n="libraryTitle">Library</a>
+                    <a href="#recommended" class="nav-link" data-i18n="recommendedTitle">Recommended</a>
+                </nav>
+
+                <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="header-actions">
+                    <button id="logoutBtn" class="btn btn-primary anim" data-i18n="logout">Logout</button>
+
+                    <div class="lang-toggle" onclick="toggleLang()">
+                        <span class="lang-toggle-knob"></span>
+                        <span class="lang-toggle-label">EN</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#books" class="mobile-menu-link" data-i18n="booksTitle">Books</a>
+            <a href="#news" class="mobile-menu-link" data-i18n="newsTitle">News</a>
+            <a href="#library" class="mobile-menu-link" data-i18n="libraryTitle">Library</a>
+            <a href="#recommended" class="mobile-menu-link" data-i18n="recommendedTitle">Recommended</a>
+        </div>
+
+        <main>
+            <!-- 1. Books Section -->
+            <section class="portal-section books-section" id="books">
+                <div class="portal-inner">
+                    <div class="section-header">
+                        <h3 data-i18n="booksTitle">Books</h3>
+                    </div>
+                    <div class="swiper section-swiper books-swiper">
+                        <div class="swiper-wrapper" id="booksCarousel"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. News Section -->
+            <section class="portal-section news-section" id="news">
+                <div class="portal-inner">
+                    <div class="section-header">
+                        <h3 data-i18n="newsTitle">News</h3>
+                        <button class="btn-see-all anim" id="seeAllNewsBtn" data-i18n="seeAll">See All</button>
+                    </div>
+                    <div class="swiper section-swiper news-swiper">
+                        <div class="swiper-wrapper" id="newsCarousel"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Library Section -->
+            <section class="portal-section library-section" id="library">
+                <div class="portal-inner">
+                    <div class="section-header">
+                        <h3 data-i18n="libraryTitle">Library</h3>
+                    </div>
+                    <div class="filters">
+                        <button class="filter-btn active anim" data-filter="all" data-i18n="filterAll">All</button>
+                        <button class="filter-btn anim" data-filter="fiction" data-i18n="filterFiction">Fiction</button>
+                        <button class="filter-btn anim" data-filter="non-fiction" data-i18n="filterNonFiction">Non-Fiction</button>
+                        <button class="filter-btn anim" data-filter="history" data-i18n="filterHistory">History</button>
+                    </div>
+                    <div class="swiper section-swiper library-swiper">
+                        <div class="swiper-wrapper" id="libraryCarousel"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="section-footer">
+                        <button class="btn-see-all anim" id="seeAllBooksBtn" data-i18n="seeAll">See All</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Recommended Section -->
+            <section class="portal-section recommended-section" id="recommended">
+                <div class="portal-inner">
+                    <div class="section-header">
+                        <h3 data-i18n="recommendedTitle" style="color: white;">Recommended for You</h3>
+                    </div>
+                    <div class="swiper section-swiper recommended-swiper">
+                        <div class="swiper-wrapper" id="recommendedCarousel"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <span data-i18n="copyright">© Copyright 2026 E-Book</span>
+            <div class="footer-links">
+                <a href="docs/terms-of-use.pdf" data-i18n="termsOfUse">Terms of Use</a>
+                <span class="separator">-</span>
+                <a href="docs/privacy-policy.pdf" data-i18n="privacyPolicy">Privacy Policy</a>
+                <span class="separator">-</span>
+                <a href="docs/cookie-policy.pdf" data-i18n="cookiePolicy">Cookie Policy</a>
+            </div>
+        </footer>
+
+        <!-- Reader Modal -->
+        <div class="reader-overlay" id="readerOverlay">
+            <div class="reader-modal">
+                <div class="reader-header">
+                    <div class="reader-book-info">
+                        <span class="reader-title" id="readerTitle"></span>
+                        <span class="reader-author" id="readerAuthor"></span>
+                    </div>
+                    <div class="reader-zoom">
+                        <button class="reader-zoom-btn" id="zoomOut">&minus;</button>
+                        <span class="reader-zoom-level" id="zoomLevel">100%</span>
+                        <button class="reader-zoom-btn" id="zoomIn">&plus;</button>
+                    </div>
+                    <button class="reader-close" id="readerClose">&times;</button>
+                </div>
+                <div class="reader-body">
+                    <iframe id="readerFrame" src="" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="js/loader.js"></script>
+        <script src="js/lang.js"></script>
+        <script src="js/auth.js"></script>
+        <script src="js/app.js"></script>
+
+        <script>
+            applyTranslations();
+            requireAuth();
+
+            // Logout
+            document.getElementById('logoutBtn').addEventListener('click', () => {
+                logout();
+                navigateTo('index.html');
+            });
+
+            // Load data then render all sections
+            loadAllData().then(() => {
+                loadBooks();
+                loadNews();
+                loadLibrary();
+                loadRecommended();
+            });
+
+            // Filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    filterLibrary(btn.dataset.filter);
+                });
+            });
+
+            // See All / Show Less toggle for library
+            document.getElementById('seeAllBooksBtn').addEventListener('click', () => {
+                const btn = document.getElementById('seeAllBooksBtn');
+                libraryExpanded = !libraryExpanded;
+                btn.textContent = libraryExpanded ? t('showLess') : t('seeAll');
+                const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+                if (activeFilter === 'all') {
+                    displayLibrary(libraryBooks);
+                } else {
+                    displayLibrary(libraryBooks.filter(b => b.category === activeFilter));
+                }
+            });
+
+            // See All / Show Less toggle for news
+            document.getElementById('seeAllNewsBtn').addEventListener('click', () => {
+                const btn = document.getElementById('seeAllNewsBtn');
+                newsExpanded = !newsExpanded;
+                btn.textContent = newsExpanded ? t('showLess') : t('seeAll');
+                displayNews(allData.news);
+            });
+
+            // Smooth scroll with navbar offset
+            document.querySelectorAll('.nav-link, .mobile-menu-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const href = link.getAttribute('href');
+                    if (!href.startsWith('#')) return;
+                    const target = document.querySelector(href);
+                    if (!target) return;
+                    e.preventDefault();
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    window.scrollTo({
+                        top: target.offsetTop - headerHeight,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Reader modal
+            document.getElementById('readerClose').addEventListener('click', closeReader);
+            document.getElementById('readerOverlay').addEventListener('click', (e) => {
+                if (e.target === e.currentTarget) closeReader();
+            });
+            document.getElementById('zoomIn').addEventListener('click', zoomIn);
+            document.getElementById('zoomOut').addEventListener('click', zoomOut);
+
+            // Hamburger menu toggle
+            const hamburger = document.getElementById('hamburgerBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            hamburger.addEventListener('click', () => {
+                const open = mobileMenu.classList.toggle('open');
+                hamburger.classList.toggle('active', open);
+            });
+            document.querySelectorAll('.mobile-menu-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    hamburger.classList.remove('active');
+                });
+            });
+        </script>
+    </body>
+</html>

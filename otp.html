@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP - Ebook Library</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-bg">
+    <div class="page-loader" id="pageLoader"><div class="spinner"></div></div>
+    <nav class="auth-navbar">
+        <img title="logo" src="/assets/Logo.png" />
+        <span class="logo" data-i18n="appName">Ebook Library</span>
+        <div id="langSelector"></div>
+    </nav>
+
+    <div class="container">
+        <div class="auth-card">
+            <h1 data-i18n="otpTitle">Verify OTP</h1>
+            <p data-i18n="otpSubtitle">Enter the PIN code</p>
+
+            <form id="otpForm">
+                <div class="otp-inputs">
+                    <input placeholder="0" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" required>
+                    <input placeholder="0" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" required>
+                    <input placeholder="0" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" required>
+                    <input placeholder="0" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" required>
+                    <input placeholder="0" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" required>
+                </div>
+                <button type="submit" class="btn btn-primary anim" data-i18n="verify">Continue</button>
+            </form>
+
+            <p class="error-message" id="errorMessage"></p>
+
+            <div class="auth-info">
+                <ul>
+                    <li data-i18n="authInfoWelcome">Welcome to "E-Book"</li>
+                    <li data-i18n="authInfoTrial">First 3 days free trial for new users, then subscription</li>
+                    <li data-i18n="authInfoCancel">You can cancel your subscription at any time</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <span data-i18n="copyright">© Copyright 2026 E-Book</span>
+        <div class="footer-links">
+            <a href="docs/terms-of-use.pdf" data-i18n="termsOfUse">Terms of Use</a>
+            <span class="separator">-</span>
+            <a href="docs/privacy-policy.pdf" data-i18n="privacyPolicy">Privacy Policy</a>
+            <span class="separator">-</span>
+            <a href="docs/cookie-policy.pdf" data-i18n="cookiePolicy">Cookie Policy</a>
+        </div>
+    </footer>
+
+    <script src="js/loader.js"></script>
+    <script src="js/lang.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        // Add language selector
+        document.getElementById('langSelector').innerHTML = createLangSelector();
+        applyTranslations();
+
+        const phone = sessionStorage.getItem('pendingPhone');
+
+        // Redirect if no phone stored
+        if (!phone) {
+            navigateTo('login.html');
+        }
+
+        // OTP digit inputs - auto focus & navigation
+        const otpInputs = document.querySelectorAll('.otp-inputs input');
+        otpInputs.forEach((input, i) => {
+            input.addEventListener('input', (e) => {
+                // Strip non-digits
+                e.target.value = e.target.value.replace(/\D/g, '');
+                if (e.target.value && i < otpInputs.length - 1) {
+                    otpInputs[i + 1].focus();
+                }
+            });
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !e.target.value && i > 0) {
+                    otpInputs[i - 1].focus();
+                }
+            });
+            input.addEventListener('paste', (e) => {
+                e.preventDefault();
+                const data = e.clipboardData.getData('text').replace(/\D/g, '').slice(0, otpInputs.length);
+                data.split('').forEach((char, j) => {
+                    if (otpInputs[j]) otpInputs[j].value = char;
+                });
+                const next = Math.min(data.length, otpInputs.length - 1);
+                otpInputs[next].focus();
+            });
+        });
+
+        // Handle OTP verification
+        document.getElementById('otpForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const otp = Array.from(otpInputs).map(i => i.value).join('');
+            const errorEl = document.getElementById('errorMessage');
+
+            if (otp.length < otpInputs.length) return;
+
+            try {
+                errorEl.textContent = '';
+                await verifyOTP(phone, otp);
+                sessionStorage.removeItem('pendingPhone');
+                navigateTo('home.html');
+            } catch (error) {
+                errorEl.textContent = error.message || t('invalidOtp');
+            }
+        });
+    </script>
+</body>
+</html>

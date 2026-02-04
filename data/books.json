@@ -1,0 +1,248 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "title": { "en": "1984", "ru": "1984", "uz": "1984" },
+            "author": { "en": "George Orwell", "ru": "Джордж Оруэлл", "uz": "Jorj Oruell" },
+            "category": "fiction",
+            "cover": "/assets/books/1/cover.avif",
+            "pdf": "/assets/books/1/book.pdf"
+        },
+        {
+            "id": 2,
+            "title": { "en": "The Alchemist", "ru": "Алхимик", "uz": "Alkimyogar" },
+            "author": { "en": "Paulo Coelho", "ru": "Пауло Коэльо", "uz": "Paulo Koelo" },
+            "category": "fiction",
+            "cover": "/assets/books/2/cover.avif",
+            "pdf": "/assets/books/2/book.pdf"
+        },
+        {
+            "id": 3,
+            "title": { "en": "The Silent Patient", "ru": "Безмолвный пациент", "uz": "Jimjit bemor" },
+            "author": { "en": "Alex Michaelides", "ru": "Алекс Михаэлидес", "uz": "Aleks Mixaelidis" },
+            "category": "fiction",
+            "cover": "/assets/books/3/cover.avif",
+            "pdf": "/assets/books/3/book.pdf"
+        },
+        {
+            "id": 4,
+            "title": { "en": "A Song of Ice and Fire – 1", "ru": "Песнь Льда и Огня – 1", "uz": "Muz va olov qoʻshigʻi – 1" },
+            "author": { "en": "George R.R. Martin", "ru": "Джордж Мартин", "uz": "Jorj R.R. Martin" },
+            "category": "fiction",
+            "cover": "/assets/books/4/cover.avif",
+            "pdf": "/assets/books/4/book.pdf"
+        },
+        {
+            "id": 5,
+            "title": { "en": "The Easy Way to Stop Smoking", "ru": "Легкий способ бросить курить", "uz": "Chekishni tashlashning oson yoʻli" },
+            "author": { "en": "Allen Carr", "ru": "Аллен Карр", "uz": "Allen Karr" },
+            "category": "non-fiction",
+            "cover": "/assets/books/5/cover.avif",
+            "pdf": "/assets/books/5/book.pdf"
+        },
+        {
+            "id": 6,
+            "title": { "en": "Lolita", "ru": "Лолита", "uz": "Lolita" },
+            "author": { "en": "Vladimir Nabokov", "ru": "Владимир Набоков", "uz": "Vladimir Nabokov" },
+            "category": "fiction",
+            "cover": "/assets/books/6/cover.avif",
+            "pdf": "/assets/books/6/book.pdf"
+        },
+        {
+            "id": 7,
+            "title": { "en": "The Miracle Morning", "ru": "Магия утра", "uz": "Ertalabning sehri" },
+            "author": { "en": "Hal Elrod", "ru": "Хэл Элрод", "uz": "Xel Elrod" },
+            "category": "non-fiction",
+            "cover": "/assets/books/7/cover.avif",
+            "pdf": "/assets/books/7/book.pdf"
+        }
+    ],
+    "news": [
+        {
+            "id": 1,
+            "title": { "en": "New Arrivals This Week", "ru": "Новинки этой недели", "uz": "Bu haftaning yangiliklari" },
+            "description": { "en": "Check out 50+ new books added to our collection", "ru": "Более 50 новых книг в нашей коллекции", "uz": "Kolleksiyamizga qoʻshilgan 50+ yangi kitoblarni koʻring" },
+            "image": "/assets/news/1.avif",
+            "date": "2024-01-15"
+        },
+        {
+            "id": 2,
+            "title": { "en": "Reading Challenge 2026", "ru": "Читательский вызов 2026", "uz": "Oʻqish chaqiruvi 2026" },
+            "description": { "en": "Join our annual reading challenge and win prizes", "ru": "Присоединяйтесь к ежегодному вызову и выиграйте призы", "uz": "Yillik oʻqish tanloviga qoʻshiling va sovrinlar yuting" },
+            "image": "/assets/news/2.avif",
+            "date": "2024-01-14"
+        },
+        {
+            "id": 3,
+            "title": { "en": "Author Spotlight", "ru": "Автор в центре внимания", "uz": "Muallif diqqat markazida" },
+            "description": { "en": "Exclusive interview with bestselling author", "ru": "Эксклюзивное интервью с автором бестселлера", "uz": "Eng koʻp sotilgan muallif bilan eksklyuziv intervyu" },
+            "image": "/assets/news/3.avif",
+            "date": "2024-01-13"
+        },
+        {
+            "id": 4,
+            "title": { "en": "App Update v2.0", "ru": "Обновление v2.0", "uz": "Yangilanish v2.0" },
+            "description": { "en": "New features including dark mode and bookmarks", "ru": "Новые функции: тёмная тема и закладки", "uz": "Yangi funksiyalar: tungi rejim va xatchoʻplar" },
+            "image": "/assets/news/4.avif",
+            "date": "2024-01-12"
+        },
+        {
+            "id": 5,
+            "title": { "en": "Weekend Sale", "ru": "Выходные скидки", "uz": "Dam olish kunlari chegirmasi" },
+            "description": { "en": "Get 30% off on all premium books", "ru": "Скидка 30% на все премиум книги", "uz": "Barcha premium kitoblarga 30% chegirma" },
+            "image": "/assets/news/5.avif",
+            "date": "2024-01-11"
+        }
+    ],
+    "library": [
+        {
+            "id": 101,
+            "title": { "en": "Flowers for Algernon", "ru": "Цветы для Элджернона", "uz": "Eljernon uchun gullar" },
+            "author": { "en": "Daniel Keyes", "ru": "Дэниел Киз", "uz": "Deniel Kiz" },
+            "category": "fiction",
+            "cover": "/assets/books/101/cover.avif",
+            "pdf": "/assets/books/101/book.pdf"
+        },
+        {
+            "id": 102,
+            "title": { "en": "Fahrenheit 451", "ru": "451 градус по Фаренгейту", "uz": "Farengeyt 451" },
+            "author": { "en": "Ray Bradbury", "ru": "Рэй Дуглас Брэдбери", "uz": "Rey Bredberi" },
+            "category": "fiction",
+            "cover": "/assets/books/102/cover.avif",
+            "pdf": "/assets/books/102/book.pdf"
+        },
+        {
+            "id": 103,
+            "title": { "en": "Babi Yar", "ru": "Бабий Яр", "uz": "Babiy Yar" },
+            "author": { "en": "Anatoly Kuznetsov", "ru": "Анатолий Кузнецов", "uz": "Anatoliy Kuznetsov" },
+            "category": "history",
+            "cover": "/assets/books/103/cover.avif",
+            "pdf": "/assets/books/103/book.pdf"
+        },
+        {
+            "id": 104,
+            "title": { "en": "Deniska's Stories", "ru": "Денискины рассказы (сборник)", "uz": "Deniskaning hikoyalari" },
+            "author": { "en": "Viktor Dragunsky", "ru": "Виктор Драгунский", "uz": "Viktor Dragunskiy" },
+            "category": "fiction",
+            "cover": "/assets/books/104/cover.avif",
+            "pdf": "/assets/books/104/book.pdf"
+        },
+        {
+            "id": 105,
+            "title": { "en": "Never Split the Difference", "ru": "Договориться не проблема. Как добиваться своего...", "uz": "Kelishish muammo emas" },
+            "author": { "en": "Chris Voss", "ru": "Крис Восс", "uz": "Kris Voss" },
+            "category": "non-fiction",
+            "cover": "/assets/books/105/cover.avif",
+            "pdf": "/assets/books/105/book.pdf"
+        },
+        {
+            "id": 106,
+            "title": { "en": "The Gray House", "ru": "Дом, в котором…", "uz": "Kulrang uy" },
+            "author": { "en": "Mariam Petrosyan", "ru": "Мариам Петросян", "uz": "Mariam Petrosyan" },
+            "category": "fiction",
+            "cover": "/assets/books/106/cover.avif",
+            "pdf": "/assets/books/106/book.pdf"
+        },
+        {
+            "id": 107,
+            "title": { "en": "The Call of Cthulhu", "ru": "Зов Ктулху (сборник)", "uz": "Ktulxu chaqirigʻi" },
+            "author": { "en": "H.P. Lovecraft", "ru": "Говард Лавкрафт", "uz": "Govard Lavkraft" },
+            "category": "fiction",
+            "cover": "/assets/books/107/cover.avif",
+            "pdf": "/assets/books/107/book.pdf"
+        },
+        {
+            "id": 108,
+            "title": { "en": "The Book Thief", "ru": "Книжный вор", "uz": "Kitob oʻgʻrisi" },
+            "author": { "en": "Markus Zusak", "ru": "Маркус Зусак", "uz": "Markus Zusak" },
+            "category": "fiction",
+            "cover": "/assets/books/108/cover.avif",
+            "pdf": "/assets/books/108/book.pdf"
+        },
+        {
+            "id": 109,
+            "title": { "en": "The Godfather", "ru": "Крестный отец", "uz": "Krestnyy ota" },
+            "author": { "en": "Mario Puzo", "ru": "Марио Пьюзо", "uz": "Mario Pyuzo" },
+            "category": "fiction",
+            "cover": "/assets/books/109/cover.avif",
+            "pdf": "/assets/books/109/book.pdf"
+        },
+        {
+            "id": 110,
+            "title": { "en": "The Active Trader Course", "ru": "Курс активного трейдера", "uz": "Faol treyder kursi" },
+            "author": { "en": "Alexander Gerchik", "ru": "Александр Герчик", "uz": "Aleksandr Gerchik" },
+            "category": "non-fiction",
+            "cover": "/assets/books/110/cover.avif",
+            "pdf": "/assets/books/110/book.pdf"
+        },
+        {
+            "id": 111,
+            "title": { "en": "Legends and Myths of Ancient Greece", "ru": "Легенды и мифы Древней Греции", "uz": "Qadimgi Yunoniston afsonalari va miflari" },
+            "author": { "en": "Nikolai Kun", "ru": "Николай Альбертович Кун", "uz": "Nikolay Kun" },
+            "category": "history",
+            "cover": "/assets/books/111/cover.avif",
+            "pdf": "/assets/books/111/book.pdf"
+        },
+        {
+            "id": 112,
+            "title": { "en": "What Do You Say After You Say Hello?", "ru": "Люди, которые играют в игры", "uz": "Oʻyin oʻynayotgan odamlar" },
+            "author": { "en": "Eric Berne", "ru": "Эрик Леннард Берн", "uz": "Erik Bern" },
+            "category": "non-fiction",
+            "cover": "/assets/books/112/cover.avif",
+            "pdf": "/assets/books/112/book.pdf"
+        },
+        {
+            "id": 113,
+            "title": { "en": "Metro 2034", "ru": "Метро 2034", "uz": "Metro 2034" },
+            "author": { "en": "Dmitry Glukhovsky", "ru": "Дмитрий Алексеевич Глуховский", "uz": "Dmitriy Gluxovskiy" },
+            "category": "fiction",
+            "cover": "/assets/books/113/cover.avif",
+            "pdf": "/assets/books/113/book.pdf"
+        },
+        {
+            "id": 114,
+            "title": { "en": "A Mint Fairy Tale", "ru": "Мятная сказка", "uz": "Yalpizli ertak" },
+            "author": { "en": "Alexander Polyarny", "ru": "Александр Полярный", "uz": "Aleksandr Polyarnyy" },
+            "category": "fiction",
+            "cover": "/assets/books/115/cover.avif",
+            "pdf": "/assets/books/115/book.pdf"
+        }
+    ],
+    "recommended": [
+        {
+            "id": 201,
+            "title": { "en": "Educated", "ru": "Образование", "uz": "Taʼlim" },
+            "author": { "en": "Tara Westover", "ru": "Тара Вестовер", "uz": "Tara Vestover" },
+            "category": "non-fiction",
+            "cover": "/assets/books/201/cover.avif"
+        },
+        {
+            "id": 202,
+            "title": { "en": "Guns, Germs, and Steel", "ru": "Ружья, микробы и сталь", "uz": "Qurollar, mikroblar va poʻlat" },
+            "author": { "en": "Jared Diamond", "ru": "Джаред Даймонд", "uz": "Jared Daymond" },
+            "category": "history",
+            "cover": "/assets/books/202/cover.avif"
+        },
+        {
+            "id": 203,
+            "title": { "en": "The Gene", "ru": "Ген", "uz": "Gen" },
+            "author": { "en": "Siddhartha Mukherjee", "ru": "Сиддхартха Мукерджи", "uz": "Siddxartxa Mukerji" },
+            "category": "science",
+            "cover": "/assets/books/203/cover.avif"
+        },
+        {
+            "id": 204,
+            "title": { "en": "Becoming", "ru": "Становление", "uz": "Shakllanish" },
+            "author": { "en": "Michelle Obama", "ru": "Мишель Обама", "uz": "Mishel Obama" },
+            "category": "non-fiction",
+            "cover": "/assets/books/204/cover.avif"
+        },
+        {
+            "id": 205,
+            "title": { "en": "The Midnight Library", "ru": "Полночная библиотека", "uz": "Yarim tundagi kutubxona" },
+            "author": { "en": "Matt Haig", "ru": "Мэтт Хейг", "uz": "Mett Xeyg" },
+            "category": "fiction",
+            "cover": "/assets/books/205/cover.avif"
+        }
+    ]
+}
