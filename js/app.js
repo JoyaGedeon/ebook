@@ -33,7 +33,7 @@ async function loadAllData() {
 // ============================================
 // SHARED CARD TEMPLATE
 // ============================================
-            //    <div class="carousel-img" style="background: url(${item.cover || item.image || '/assets/images/placeholder.png'})"
+            //    <div class="carousel-img" style="background: url(${item.cover || item.image || './assets/images/placeholder.png'})"
             //         title="${localized(item.title)}"
             //         ></div>
 
