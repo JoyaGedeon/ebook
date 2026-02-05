@@ -38,12 +38,26 @@ async function loadAllData() {
             //         ></div>
 
 function renderCard(item, onclick) {
+    const needsSubscribe = item.subscribe && !isLoggedIn();
+    const cardOnclick = needsSubscribe ? `navigateTo('login.html')` : onclick;
+    const subscribeOverlay = needsSubscribe
+        ?   `<div class="subscribe-overlay">
+                <img class="subscribe-lock" src='assets/lock.png'/>
+                <span class="subscribe-badge">
+                    ${t('subscribe')}
+                </span>
+            </div>`
+        : '';
+
     return `
         <div class="swiper-slide">
-            <div class="carousel-card anim" onclick="${onclick}">
-                <img class="carousel-img" src="${item.cover || item.image || 'assets/images/placeholder.png'}"
-                    alt="${localized(item.title)}"
-                    onerror="this.style.backgroundColor='#ddd'; this.alt='No cover'">
+            <div class="carousel-card anim" onclick="${cardOnclick}">
+                <div class="carousel-img-wrapper">
+                    <img class="carousel-img" src="${item.cover || item.image || 'assets/images/placeholder.png'}"
+                        alt="${localized(item.title)}"
+                        onerror="this.style.backgroundColor='#ddd'; this.alt='No cover'">
+                    ${subscribeOverlay}
+                </div>
                 <div class="carousel-content">
                     <span class="card-title">${localized(item.title)}</span>
                     <span class="card-author">${localized(item.author || item.description)}</span>

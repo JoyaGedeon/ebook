@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Ebook Library</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24/build/css/intlTelInput.css">
 </head>
 <body class="auth-bg">
     <div class="page-loader" id="pageLoader"><div class="spinner"></div></div>
@@ -22,13 +23,12 @@
             <form id="loginForm">
                 <div class="form-group">
                     <div class="phone-input-wrapper">
-                        <span class="phone-prefix" id="phonePrefix">+1</span>
                         <input
+                            title="phone number"
                             type="tel"
                             id="phone"
                             name="phone"
-                            data-i18n-placeholder="phonePlaceholder"
-                            placeholder="234 567 8900"
+                            placeholder=""
                             required
                         >
                     </div>
@@ -62,6 +62,7 @@
     <script src="js/loader.js"></script>
     <script src="js/lang.js"></script>
     <script src="js/auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24/build/js/intlTelInput.min.js"></script>
     <script>
         // Add language selector
         document.getElementById('langSelector').innerHTML = createLangSelector();
@@ -71,41 +72,38 @@
         redirectIfLoggedIn();
 
         const phoneInput = document.getElementById('phone');
-        const prefixEl = document.getElementById('phonePrefix');
 
-        // Strip non-digits as user types
-        phoneInput.addEventListener('input', () => {
-            phoneInput.value = phoneInput.value.replace(/\D/g, '');
+        // Map app language to default country
+        const langToCountry = { en: 'us', ru: 'ru', uz: 'uz' };
+        const defaultCountry = langToCountry[getCurrentLang()] || 'uz';
+
+        // Initialize intl-tel-input
+        const iti = intlTelInput(phoneInput, {
+            initialCountry: defaultCountry,
+            preferredCountries: ['uz', 'ru', 'us'],
+            excludeCountries: ['il', 'kp'],
+            separateDialCode: true,
+            utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@24/build/js/utils.js',
         });
 
-        // Set maxlength based on current prefix
-        function updatePhoneMaxLength() {
-            const prefix = prefixEl.textContent;
-            const maxLen = PHONE_LENGTHS[prefix] || 15;
-            phoneInput.maxLength = maxLen;
-        }
-        updatePhoneMaxLength();
-
-        // Re-apply maxlength when language changes
+        // Update default country when language changes
         const origSetLang = setLang;
         setLang = function(lang) {
             origSetLang(lang);
-            updatePhoneMaxLength();
+            const country = langToCountry[lang] || 'uz';
+            iti.setCountry(country);
         };
 
         document.getElementById('loginForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const prefix = prefixEl.textContent;
-            const digits = phoneInput.value.replace(/\D/g, '');
-            const expectedLen = PHONE_LENGTHS[prefix];
             const errorEl = document.getElementById('errorMessage');
 
-            if (expectedLen && digits.length !== expectedLen) {
-                errorEl.textContent = t('phoneInvalid').replace('{n}', expectedLen);
+            if (!iti.isValidNumber()) {
+                errorEl.textContent = t('phoneInvalid').replace('{n}', '');
                 return;
             }
 
-            const phone = prefix + digits;
+            const phone = iti.getNumber();
 
             try {
                 errorEl.textContent = '';

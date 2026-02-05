@@ -21,6 +21,7 @@
             "title": { "en": "The Silent Patient", "ru": "Безмолвный пациент", "uz": "Jimjit bemor" },
             "author": { "en": "Alex Michaelides", "ru": "Алекс Михаэлидес", "uz": "Aleks Mixaelidis" },
             "category": "fiction",
+            "subscribe": true,
             "cover": "./assets/books/3/cover.avif",
             "pdf": "./assets/books/3/book.pdf"
         },
@@ -37,6 +38,7 @@
             "title": { "en": "The Easy Way to Stop Smoking", "ru": "Легкий способ бросить курить", "uz": "Chekishni tashlashning oson yoʻli" },
             "author": { "en": "Allen Carr", "ru": "Аллен Карр", "uz": "Allen Karr" },
             "category": "non-fiction",
+            "subscribe": true,
             "cover": "./assets/books/5/cover.avif",
             "pdf": "./assets/books/5/book.pdf"
         },
@@ -53,6 +55,7 @@
             "title": { "en": "The Miracle Morning", "ru": "Магия утра", "uz": "Ertalabning sehri" },
             "author": { "en": "Hal Elrod", "ru": "Хэл Элрод", "uz": "Xel Elrod" },
             "category": "non-fiction",
+            "subscribe": true,
             "cover": "./assets/books/7/cover.avif",
             "pdf": "./assets/books/7/book.pdf"
         }
@@ -62,35 +65,36 @@
             "id": 1,
             "title": { "en": "New Arrivals This Week", "ru": "Новинки этой недели", "uz": "Bu haftaning yangiliklari" },
             "description": { "en": "Check out 50+ new books added to our collection", "ru": "Более 50 новых книг в нашей коллекции", "uz": "Kolleksiyamizga qoʻshilgan 50+ yangi kitoblarni koʻring" },
-            "image": "./assets/news/1.avif",
+            "image": "./assets/books/301/cover.avif",
             "date": "2024-01-15"
         },
         {
             "id": 2,
             "title": { "en": "Reading Challenge 2026", "ru": "Читательский вызов 2026", "uz": "Oʻqish chaqiruvi 2026" },
             "description": { "en": "Join our annual reading challenge and win prizes", "ru": "Присоединяйтесь к ежегодному вызову и выиграйте призы", "uz": "Yillik oʻqish tanloviga qoʻshiling va sovrinlar yuting" },
-            "image": "./assets/news/2.avif",
+            "image": "./assets/books/302/cover.avif",
             "date": "2024-01-14"
         },
         {
             "id": 3,
             "title": { "en": "Author Spotlight", "ru": "Автор в центре внимания", "uz": "Muallif diqqat markazida" },
             "description": { "en": "Exclusive interview with bestselling author", "ru": "Эксклюзивное интервью с автором бестселлера", "uz": "Eng koʻp sotilgan muallif bilan eksklyuziv intervyu" },
-            "image": "./assets/news/3.avif",
+            "image": "./assets/books/303/cover.avif",
             "date": "2024-01-13"
         },
         {
             "id": 4,
             "title": { "en": "App Update v2.0", "ru": "Обновление v2.0", "uz": "Yangilanish v2.0" },
             "description": { "en": "New features including dark mode and bookmarks", "ru": "Новые функции: тёмная тема и закладки", "uz": "Yangi funksiyalar: tungi rejim va xatchoʻplar" },
-            "image": "./assets/news/4.avif",
+            "image": "./assets/books/304/cover.avif",
             "date": "2024-01-12"
         },
         {
             "id": 5,
             "title": { "en": "Weekend Sale", "ru": "Выходные скидки", "uz": "Dam olish kunlari chegirmasi" },
             "description": { "en": "Get 30% off on all premium books", "ru": "Скидка 30% на все премиум книги", "uz": "Barcha premium kitoblarga 30% chegirma" },
-            "image": "./assets/news/5.avif",
+            "image": "./assets/books/305/cover.avif",
+            "pdf": "./assets/books/304/cover.avif",
             "date": "2024-01-11"
         }
     ],
@@ -108,6 +112,7 @@
             "title": { "en": "Fahrenheit 451", "ru": "451 градус по Фаренгейту", "uz": "Farengeyt 451" },
             "author": { "en": "Ray Bradbury", "ru": "Рэй Дуглас Брэдбери", "uz": "Rey Bredberi" },
             "category": "fiction",
+            "subscribe": true,
             "cover": "./assets/books/102/cover.avif",
             "pdf": "./assets/books/102/book.pdf"
         },
@@ -132,6 +137,7 @@
             "title": { "en": "Never Split the Difference", "ru": "Договориться не проблема. Как добиваться своего...", "uz": "Kelishish muammo emas" },
             "author": { "en": "Chris Voss", "ru": "Крис Восс", "uz": "Kris Voss" },
             "category": "non-fiction",
+            "subscribe": true,
             "cover": "./assets/books/105/cover.avif",
             "pdf": "./assets/books/105/book.pdf"
         },
@@ -164,6 +170,7 @@
             "title": { "en": "The Godfather", "ru": "Крестный отец", "uz": "Krestnyy ota" },
             "author": { "en": "Mario Puzo", "ru": "Марио Пьюзо", "uz": "Mario Pyuzo" },
             "category": "fiction",
+            "subscribe": true,
             "cover": "./assets/books/109/cover.avif",
             "pdf": "./assets/books/109/book.pdf"
         },
@@ -214,35 +221,42 @@
             "title": { "en": "Educated", "ru": "Образование", "uz": "Taʼlim" },
             "author": { "en": "Tara Westover", "ru": "Тара Вестовер", "uz": "Tara Vestover" },
             "category": "non-fiction",
-            "cover": "./assets/books/201/cover.avif"
+            "cover": "./assets/books/201/cover.avif",
+            "pdf": "./assets/books/201/book.pdf"
         },
         {
             "id": 202,
             "title": { "en": "Guns, Germs, and Steel", "ru": "Ружья, микробы и сталь", "uz": "Qurollar, mikroblar va poʻlat" },
             "author": { "en": "Jared Diamond", "ru": "Джаред Даймонд", "uz": "Jared Daymond" },
             "category": "history",
-            "cover": "./assets/books/202/cover.avif"
+            "cover": "./assets/books/202/cover.avif",
+            "pdf": "./assets/books/202/book.pdf"
         },
         {
             "id": 203,
             "title": { "en": "The Gene", "ru": "Ген", "uz": "Gen" },
             "author": { "en": "Siddhartha Mukherjee", "ru": "Сиддхартха Мукерджи", "uz": "Siddxartxa Mukerji" },
             "category": "science",
-            "cover": "./assets/books/203/cover.avif"
+            "subscribe": true,
+            "cover": "./assets/books/203/cover.avif",
+            "pdf": "./assets/books/203/book.pdf"
         },
         {
             "id": 204,
             "title": { "en": "Becoming", "ru": "Становление", "uz": "Shakllanish" },
             "author": { "en": "Michelle Obama", "ru": "Мишель Обама", "uz": "Mishel Obama" },
             "category": "non-fiction",
-            "cover": "./assets/books/204/cover.avif"
+            "cover": "./assets/books/204/cover.avif",
+            "pdf": "./assets/books/204/book.pdf"
         },
         {
             "id": 205,
             "title": { "en": "The Midnight Library", "ru": "Полночная библиотека", "uz": "Yarim tundagi kutubxona" },
             "author": { "en": "Matt Haig", "ru": "Мэтт Хейг", "uz": "Mett Xeyg" },
             "category": "fiction",
-            "cover": "./assets/books/205/cover.avif"
+            "subscribe": true,
+            "cover": "./assets/books/205/cover.avif",
+            "pdf": "./assets/books/205/book.pdf"
         }
     ]
 }
