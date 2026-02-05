@@ -9,6 +9,7 @@ const translations = {
         appName: 'Ebook Library',
         homeName: "Source of Knowledge",
         logout: 'Logout',
+        login: 'Login',
 
         // Index page
         welcome: 'Welcome to Ebook Library',
@@ -74,6 +75,7 @@ const translations = {
         appName: 'Библиотека электронных книг',
         homeName: "Источник Знаний",
         logout: 'Выйти',
+        login: 'Войти',
 
         // Index page
         welcome: 'Добро пожаловать в библиотеку',
@@ -139,6 +141,7 @@ const translations = {
         appName: 'Elektron kutubxona',
         homeName: "Bilim Manbai",
         logout: 'Chiqish',
+        login: 'Kirish',
 
         // Index page
         welcome: 'Elektron kutubxonaga xush kelibsiz',

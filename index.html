@@ -32,6 +32,7 @@
 
                 <div class="header-actions">
                     <button id="logoutBtn" class="btn btn-primary anim" data-i18n="logout" style="display:none;">Logout</button>
+                    <button id="loginBtn" class="btn btn-primary anim" data-i18n="login" style="display:none;">Login</button>
 
                     <div class="lang-toggle" onclick="toggleLang()">
                         <span class="lang-toggle-knob"></span>
@@ -157,14 +158,20 @@
         <script>
             applyTranslations();
 
-            // Show logout button only when logged in
+            // Show logout button when logged in, login button when not
             const logoutBtn = document.getElementById('logoutBtn');
+            const loginBtn = document.getElementById('loginBtn');
             if (isLoggedIn()) {
                 logoutBtn.style.display = '';
+            } else {
+                loginBtn.style.display = '';
             }
             logoutBtn.addEventListener('click', () => {
                 logout();
                 window.location.reload();
+            });
+            loginBtn.addEventListener('click', () => {
+                window.location.href = 'login.html';
             });
 
             // Load data then render all sections
