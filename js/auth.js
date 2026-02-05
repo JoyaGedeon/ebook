@@ -117,7 +117,7 @@ function logout() {
 
 /**
  * Protect a page - redirect to login if not authenticated
- * Call this on pages that require login (e.g., home.html)
+ * Call this on pages that require login (e.g., index.html)
  */
 function requireAuth() {
     if (!isLoggedIn()) {
@@ -133,7 +133,7 @@ function requireAuth() {
  */
 function redirectIfLoggedIn() {
     if (isLoggedIn()) {
-        navigateTo('home.html');
+        navigateTo('index.html');
         return true;
     }
     return false;

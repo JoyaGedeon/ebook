@@ -106,7 +106,7 @@
                 errorEl.textContent = '';
                 await verifyOTP(phone, otp);
                 sessionStorage.removeItem('pendingPhone');
-                navigateTo('home.html');
+                navigateTo('index.html');
             } catch (error) {
                 errorEl.textContent = error.message || t('invalidOtp');
             }
