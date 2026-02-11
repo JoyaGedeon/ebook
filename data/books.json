@@ -94,40 +94,13 @@
             "date": "2026-02-07"
         },
         {
-            "id": 5,
-            "title": { "en": "Newspaper _Xalq so'zi_ - 23", "ru": "Газета _Xalq so'zi_ - 23", "uz": "Gazeta _Xalq so'zi_ - 23" },
+            "id": 10,
+            "title": { "en": "Newspaper _Xalq so'zi_ - 25", "ru": "Газета _Xalq so'zi_ - 25", "uz": "Gazeta _Xalq so'zi_ - 25" },
             "description": { "en": "Get 30% off on all premium books", "ru": "Скидка 30% на все премиум книги", "uz": "Barcha premium kitoblarga 30% chegirma" },
-            "image": "./assets/books/305/cover.avif",
-            "pdf": "./assets/books/305/book.pdf",
+            "image": "./assets/books/310/cover.avif",
+            "pdf": "./assets/books/310/book.pdf",
             "subscribe": true,
-            "date": "2026-02-04"
-        },
-        {
-            "id": 6,
-            "title": { "en": "Newspaper _Xalq so'zi_ - 23", "ru": "Газета _Xalq so'zi_ - 23", "uz": "Gazeta _Xalq so'zi_ - 23" },
-            "description": { "en": "Check out 50+ new books added to our collection", "ru": "Более 50 новых книг в нашей коллекции", "uz": "Kolleksiyamizga qoʻshilgan 50+ yangi kitoblarni koʻring" },
-            "image": "./assets/books/306/cover.avif",
-            "pdf": "./assets/books/306/book.pdf",
-            "subscribe": true,
-            "date": "2026-02-04"
-        },
-        {
-            "id": 7,
-            "title": { "en": "Newspaper _Xalq so'zi_ - 22", "ru": "Газета _Xalq so'zi_ - 22", "uz": "Gazeta _Xalq so'zi_ - 22" },
-            "description": { "en": "Join our annual reading challenge and win prizes", "ru": "Присоединяйтесь к ежегодному вызову и выиграйте призы", "uz": "Yillik oʻqish tanloviga qoʻshiling va sovrinlar yuting" },
-            "image": "./assets/books/307/cover.avif",
-            "pdf": "./assets/books/307/book.pdf",
-            "subscribe": true,
-            "date": "2026-02-03"
-        },
-        {
-            "id": 8,
-            "title": { "en": "Newspaper _Xalq so'zi_ - 22", "ru": "Газета _Xalq so'zi_ - 22", "uz": "Gazeta _Xalq so'zi_ - 22" },
-            "description": { "en": "Exclusive interview with bestselling author", "ru": "Эксклюзивное интервью с автором бестселлера", "uz": "Eng koʻp sotilgan muallif bilan eksklyuziv intervyu" },
-            "image": "./assets/books/308/cover.avif",
-            "pdf": "./assets/books/308/book.pdf",
-            "subscribe": true,
-            "date": "2026-02-03"
+            "date": "2026-02-06"
         },
         {
             "id": 9,
@@ -139,22 +112,46 @@
             "date": "2024-02-05"
         },
         {
-            "id": 10,
-            "title": { "en": "Newspaper _Xalq so'zi_ - 25", "ru": "Газета _Xalq so'zi_ - 25", "uz": "Gazeta _Xalq so'zi_ - 25" },
-            "description": { "en": "Get 30% off on all premium books", "ru": "Скидка 30% на все премиум книги", "uz": "Barcha premium kitoblarga 30% chegirma" },
-            "image": "./assets/books/310/cover.avif",
-            "pdf": "./assets/books/310/book.pdf",
-            "subscribe": true,
-            "date": "2026-02-06"
-        },
-        {
             "id": 11,
-            "title": { "en": "Weekend Sale", "ru": "Выходные скидки", "uz": "Dam olish kunlari chegirmasi" },
+            "title": { "en": "Newspaper _Xalq so'zi_ - 24", "ru": "Газета _Xalq so'zi_ - 24", "uz": "Gazeta _Xalq so'zi_ - 24" },
             "description": { "en": "Get 30% off on all premium books", "ru": "Скидка 30% на все премиум книги", "uz": "Barcha premium kitoblarga 30% chegirma" },
             "image": "./assets/books/311/cover.avif",
             "pdf": "./assets/books/311/book.pdf",
             "subscribe": true,
-            "date": "2024-01-11"
+            "date": "2026-02-05"
+        },
+        {
+            "id": 5,
+            "title": { "en": "Newspaper _Xalq so'zi_ - 23", "ru": "Газета _Xalq so'zi_ - 23", "uz": "Gazeta _Xalq so'zi_ - 23" },
+            "description": { "en": "Get 30% off on all premium books", "ru": "Скидка 30% на все премиум книги", "uz": "Barcha premium kitoblarga 30% chegirma" },
+            "image": "./assets/books/305/cover.avif",
+            "pdf": "./assets/books/305/book.pdf",
+            "date": "2026-02-04"
+        },
+        {
+            "id": 6,
+            "title": { "en": "Newspaper _Xalq so'zi_ - 23", "ru": "Газета _Xalq so'zi_ - 23", "uz": "Gazeta _Xalq so'zi_ - 23" },
+            "description": { "en": "Check out 50+ new books added to our collection", "ru": "Более 50 новых книг в нашей коллекции", "uz": "Kolleksiyamizga qoʻshilgan 50+ yangi kitoblarni koʻring" },
+            "image": "./assets/books/306/cover.avif",
+            "pdf": "./assets/books/306/book.pdf",
+            "date": "2026-02-04"
+        },
+        {
+            "id": 7,
+            "title": { "en": "Newspaper _Xalq so'zi_ - 22", "ru": "Газета _Xalq so'zi_ - 22", "uz": "Gazeta _Xalq so'zi_ - 22" },
+            "description": { "en": "Join our annual reading challenge and win prizes", "ru": "Присоединяйтесь к ежегодному вызову и выиграйте призы", "uz": "Yillik oʻqish tanloviga qoʻshiling va sovrinlar yuting" },
+            "image": "./assets/books/307/cover.avif",
+            "pdf": "./assets/books/307/book.pdf",
+            "date": "2026-02-03"
+        },
+        {
+            "id": 8,
+            "title": { "en": "Newspaper _Xalq so'zi_ - 22", "ru": "Газета _Xalq so'zi_ - 22", "uz": "Gazeta _Xalq so'zi_ - 22" },
+            "description": { "en": "Exclusive interview with bestselling author", "ru": "Эксклюзивное интервью с автором бестселлера", "uz": "Eng koʻp sotilgan muallif bilan eksklyuziv intervyu" },
+            "image": "./assets/books/308/cover.avif",
+            "pdf": "./assets/books/308/book.pdf",
+            "subscribe": true,
+            "date": "2026-02-03"
         }
     ],
     "library": [
