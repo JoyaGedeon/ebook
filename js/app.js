@@ -129,6 +129,7 @@ function openNews(id) {
     if (!news || !news.pdf) return;
     document.getElementById('readerTitle').textContent = localized(news.title);
     document.getElementById('readerAuthor').textContent = news.date || '';
+    showReaderLoader();
     document.getElementById('readerFrame').src = news.pdf + '#toolbar=0';
     readerZoom = 100;
     applyZoom();
@@ -207,11 +208,19 @@ function findBookById(id) {
 
 let readerZoom = 100;
 
+function showReaderLoader() {
+    const loader = document.getElementById('readerLoader');
+    loader.classList.remove('hidden');
+    const frame = document.getElementById('readerFrame');
+    frame.onload = function() { loader.classList.add('hidden'); };
+}
+
 function openBook(bookId) {
     const book = findBookById(bookId);
     if (!book || !book.pdf) return;
     document.getElementById('readerTitle').textContent = localized(book.title);
     document.getElementById('readerAuthor').textContent = localized(book.author);
+    showReaderLoader();
     document.getElementById('readerFrame').src = book.pdf + '#toolbar=0';
     readerZoom = 100;
     applyZoom();

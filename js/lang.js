@@ -68,6 +68,7 @@ const translations = {
         termsOfUse: 'Terms of Use',
         privacyPolicy: 'Privacy Policy',
         cookiePolicy: 'Cookie Policy',
+        loadingPdf: 'Loading PDF...',
     },
 
     ru: {
@@ -134,6 +135,7 @@ const translations = {
         termsOfUse: 'Условия использования',
         privacyPolicy: 'Политика конфиденциальности',
         cookiePolicy: 'Политика cookies',
+        loadingPdf: 'Загрузка PDF...',
     },
 
     uz: {
@@ -200,6 +202,7 @@ const translations = {
         termsOfUse: 'Foydalanish shartlari',
         privacyPolicy: 'Maxfiylik siyosati',
         cookiePolicy: 'Cookie siyosati',
+        loadingPdf: 'PDF yuklanmoqda...',
     }
 };
 
