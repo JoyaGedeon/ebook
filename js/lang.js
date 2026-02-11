@@ -43,7 +43,7 @@ const translations = {
         // Home page
         welcomeBack: 'Welcome back!',
         browseCollection: 'Browse our collection of ebooks',
-        newsTitle: 'News',
+        magazineTitle: 'Magazines',
         booksTitle: 'Books',
         libraryTitle: 'Library',
         recommendedTitle: 'Recommended for You',
@@ -109,7 +109,7 @@ const translations = {
         // Home page
         welcomeBack: 'С возвращением!',
         browseCollection: 'Просмотрите нашу коллекцию книг',
-        newsTitle: 'Новости',
+        magazineTitle: 'Журналы',
         booksTitle: 'Книги',
         libraryTitle: 'Библиотека',
         recommendedTitle: 'Рекомендуем вам',
@@ -175,7 +175,7 @@ const translations = {
         // Home page
         welcomeBack: 'Xush kelibsiz!',
         browseCollection: 'Kitoblar toʻplamimizni koʻring',
-        newsTitle: 'Yangiliklar',
+        magazineTitle: 'Jurnallar',
         booksTitle: 'Kitoblar',
         libraryTitle: 'Kutubxona',
         recommendedTitle: 'Siz uchun tavsiyalar',

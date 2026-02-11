@@ -60,7 +60,7 @@ function renderCard(item, onclick) {
                 </div>
                 <div class="carousel-content">
                     <span class="card-title">${localized(item.title)}</span>
-                    <span class="card-author">${localized(item.author || item.description)}</span>
+                    <span class="card-author">${item.date || localized(item.author || item.description)}</span>
                 </div>
             </div>
         </div>
@@ -124,7 +124,16 @@ function displayNews(news) {
 }
 
 function openNews(id) {
-    console.log('Opening news:', id);
+    if (!allData) return;
+    const news = allData.news.find(n => n.id === id);
+    if (!news || !news.pdf) return;
+    document.getElementById('readerTitle').textContent = localized(news.title);
+    document.getElementById('readerAuthor').textContent = news.date || '';
+    document.getElementById('readerFrame').src = news.pdf + '#toolbar=0';
+    readerZoom = 100;
+    applyZoom();
+    document.getElementById('readerOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
 }
 
 // ============================================

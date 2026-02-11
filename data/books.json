@@ -63,38 +63,97 @@
     "news": [
         {
             "id": 1,
-            "title": { "en": "New Arrivals This Week", "ru": "Новинки этой недели", "uz": "Bu haftaning yangiliklari" },
+            "title": { "en": "Newspaper _Xalq so'zi_ - 27", "ru": "Газета _Xalq so'zi_ - 27", "uz": "Gazeta _Xalq so'zi_ - 27" },
             "description": { "en": "Check out 50+ new books added to our collection", "ru": "Более 50 новых книг в нашей коллекции", "uz": "Kolleksiyamizga qoʻshilgan 50+ yangi kitoblarni koʻring" },
             "image": "./assets/books/301/cover.avif",
-            "date": "2024-01-15"
+            "pdf": "./assets/books/301/book.pdf",
+            "date": "2026-02-10"
         },
         {
             "id": 2,
-            "title": { "en": "Reading Challenge 2026", "ru": "Читательский вызов 2026", "uz": "Oʻqish chaqiruvi 2026" },
+            "title": { "en": "Newspaper _Xalq so'zi_ - 27", "ru": "Газета _Xalq so'zi_ - 27", "uz": "Gazeta _Xalq so'zi_ - 27" },
             "description": { "en": "Join our annual reading challenge and win prizes", "ru": "Присоединяйтесь к ежегодному вызову и выиграйте призы", "uz": "Yillik oʻqish tanloviga qoʻshiling va sovrinlar yuting" },
             "image": "./assets/books/302/cover.avif",
-            "date": "2024-01-14"
+            "pdf": "./assets/books/302/book.pdf",
+            "date": "2026-02-10"
         },
         {
             "id": 3,
-            "title": { "en": "Author Spotlight", "ru": "Автор в центре внимания", "uz": "Muallif diqqat markazida" },
+            "title": { "en": "Newspaper _Xalq so'zi_ - 26", "ru": "Газета _Xalq so'zi_ - 26", "uz": "Gazeta _Xalq so'zi_ - 26" },
             "description": { "en": "Exclusive interview with bestselling author", "ru": "Эксклюзивное интервью с автором бестселлера", "uz": "Eng koʻp sotilgan muallif bilan eksklyuziv intervyu" },
             "image": "./assets/books/303/cover.avif",
-            "date": "2024-01-13"
+            "pdf": "./assets/books/303/book.pdf",
+            "date": "2026-02-07"
         },
         {
             "id": 4,
-            "title": { "en": "App Update v2.0", "ru": "Обновление v2.0", "uz": "Yangilanish v2.0" },
+            "title": { "en": "Newspaper _Xalq so'zi_ - 26", "ru": "Газета _Xalq so'zi_ - 26", "uz": "Gazeta _Xalq so'zi_ - 26" },
             "description": { "en": "New features including dark mode and bookmarks", "ru": "Новые функции: тёмная тема и закладки", "uz": "Yangi funksiyalar: tungi rejim va xatchoʻplar" },
             "image": "./assets/books/304/cover.avif",
-            "date": "2024-01-12"
+            "pdf": "./assets/books/304/book.pdf",
+            "date": "2026-02-07"
         },
         {
             "id": 5,
-            "title": { "en": "Weekend Sale", "ru": "Выходные скидки", "uz": "Dam olish kunlari chegirmasi" },
+            "title": { "en": "Newspaper _Xalq so'zi_ - 23", "ru": "Газета _Xalq so'zi_ - 23", "uz": "Gazeta _Xalq so'zi_ - 23" },
             "description": { "en": "Get 30% off on all premium books", "ru": "Скидка 30% на все премиум книги", "uz": "Barcha premium kitoblarga 30% chegirma" },
             "image": "./assets/books/305/cover.avif",
-            "pdf": "./assets/books/304/cover.avif",
+            "pdf": "./assets/books/305/book.pdf",
+            "subscribe": true,
+            "date": "2026-02-04"
+        },
+        {
+            "id": 6,
+            "title": { "en": "Newspaper _Xalq so'zi_ - 23", "ru": "Газета _Xalq so'zi_ - 23", "uz": "Gazeta _Xalq so'zi_ - 23" },
+            "description": { "en": "Check out 50+ new books added to our collection", "ru": "Более 50 новых книг в нашей коллекции", "uz": "Kolleksiyamizga qoʻshilgan 50+ yangi kitoblarni koʻring" },
+            "image": "./assets/books/306/cover.avif",
+            "pdf": "./assets/books/306/book.pdf",
+            "subscribe": true,
+            "date": "2026-02-04"
+        },
+        {
+            "id": 7,
+            "title": { "en": "Newspaper _Xalq so'zi_ - 22", "ru": "Газета _Xalq so'zi_ - 22", "uz": "Gazeta _Xalq so'zi_ - 22" },
+            "description": { "en": "Join our annual reading challenge and win prizes", "ru": "Присоединяйтесь к ежегодному вызову и выиграйте призы", "uz": "Yillik oʻqish tanloviga qoʻshiling va sovrinlar yuting" },
+            "image": "./assets/books/307/cover.avif",
+            "pdf": "./assets/books/307/book.pdf",
+            "subscribe": true,
+            "date": "2026-02-03"
+        },
+        {
+            "id": 8,
+            "title": { "en": "Newspaper _Xalq so'zi_ - 22", "ru": "Газета _Xalq so'zi_ - 22", "uz": "Gazeta _Xalq so'zi_ - 22" },
+            "description": { "en": "Exclusive interview with bestselling author", "ru": "Эксклюзивное интервью с автором бестселлера", "uz": "Eng koʻp sotilgan muallif bilan eksklyuziv intervyu" },
+            "image": "./assets/books/308/cover.avif",
+            "pdf": "./assets/books/308/book.pdf",
+            "subscribe": true,
+            "date": "2026-02-03"
+        },
+        {
+            "id": 9,
+            "title": { "en": "Newspaper _Xalq so'zi_ - 24", "ru": "Газета _Xalq so'zi_ - 24", "uz": "Gazeta _Xalq so'zi_ - 24" },
+            "description": { "en": "New features including dark mode and bookmarks", "ru": "Новые функции: тёмная тема и закладки", "uz": "Yangi funksiyalar: tungi rejim va xatchoʻplar" },
+            "image": "./assets/books/309/cover.avif",
+            "pdf": "./assets/books/309/book.pdf",
+            "subscribe": true,
+            "date": "2024-02-05"
+        },
+        {
+            "id": 10,
+            "title": { "en": "Newspaper _Xalq so'zi_ - 25", "ru": "Газета _Xalq so'zi_ - 25", "uz": "Gazeta _Xalq so'zi_ - 25" },
+            "description": { "en": "Get 30% off on all premium books", "ru": "Скидка 30% на все премиум книги", "uz": "Barcha premium kitoblarga 30% chegirma" },
+            "image": "./assets/books/310/cover.avif",
+            "pdf": "./assets/books/310/book.pdf",
+            "subscribe": true,
+            "date": "2026-02-06"
+        },
+        {
+            "id": 11,
+            "title": { "en": "Weekend Sale", "ru": "Выходные скидки", "uz": "Dam olish kunlari chegirmasi" },
+            "description": { "en": "Get 30% off on all premium books", "ru": "Скидка 30% на все премиум книги", "uz": "Barcha premium kitoblarga 30% chegirma" },
+            "image": "./assets/books/311/cover.avif",
+            "pdf": "./assets/books/311/book.pdf",
+            "subscribe": true,
             "date": "2024-01-11"
         }
     ],
@@ -112,7 +171,6 @@
             "title": { "en": "Fahrenheit 451", "ru": "451 градус по Фаренгейту", "uz": "Farengeyt 451" },
             "author": { "en": "Ray Bradbury", "ru": "Рэй Дуглас Брэдбери", "uz": "Rey Bredberi" },
             "category": "fiction",
-            "subscribe": true,
             "cover": "./assets/books/102/cover.avif",
             "pdf": "./assets/books/102/book.pdf"
         },
@@ -146,6 +204,7 @@
             "title": { "en": "The Gray House", "ru": "Дом, в котором…", "uz": "Kulrang uy" },
             "author": { "en": "Mariam Petrosyan", "ru": "Мариам Петросян", "uz": "Mariam Petrosyan" },
             "category": "fiction",
+            "subscribe": true,
             "cover": "./assets/books/106/cover.avif",
             "pdf": "./assets/books/106/book.pdf"
         },
@@ -154,6 +213,7 @@
             "title": { "en": "The Call of Cthulhu", "ru": "Зов Ктулху (сборник)", "uz": "Ktulxu chaqirigʻi" },
             "author": { "en": "H.P. Lovecraft", "ru": "Говард Лавкрафт", "uz": "Govard Lavkraft" },
             "category": "fiction",
+            "subscribe": true,
             "cover": "./assets/books/107/cover.avif",
             "pdf": "./assets/books/107/book.pdf"
         },
@@ -162,6 +222,7 @@
             "title": { "en": "The Book Thief", "ru": "Книжный вор", "uz": "Kitob oʻgʻrisi" },
             "author": { "en": "Markus Zusak", "ru": "Маркус Зусак", "uz": "Markus Zusak" },
             "category": "fiction",
+            "subscribe": true,
             "cover": "./assets/books/108/cover.avif",
             "pdf": "./assets/books/108/book.pdf"
         },
@@ -179,6 +240,7 @@
             "title": { "en": "The Active Trader Course", "ru": "Курс активного трейдера", "uz": "Faol treyder kursi" },
             "author": { "en": "Alexander Gerchik", "ru": "Александр Герчик", "uz": "Aleksandr Gerchik" },
             "category": "non-fiction",
+            "subscribe": true,
             "cover": "./assets/books/110/cover.avif",
             "pdf": "./assets/books/110/book.pdf"
         },
@@ -187,6 +249,7 @@
             "title": { "en": "Legends and Myths of Ancient Greece", "ru": "Легенды и мифы Древней Греции", "uz": "Qadimgi Yunoniston afsonalari va miflari" },
             "author": { "en": "Nikolai Kun", "ru": "Николай Альбертович Кун", "uz": "Nikolay Kun" },
             "category": "history",
+            "subscribe": true,
             "cover": "./assets/books/111/cover.avif",
             "pdf": "./assets/books/111/book.pdf"
         },
@@ -195,6 +258,7 @@
             "title": { "en": "What Do You Say After You Say Hello?", "ru": "Люди, которые играют в игры", "uz": "Oʻyin oʻynayotgan odamlar" },
             "author": { "en": "Eric Berne", "ru": "Эрик Леннард Берн", "uz": "Erik Bern" },
             "category": "non-fiction",
+            "subscribe": true,
             "cover": "./assets/books/112/cover.avif",
             "pdf": "./assets/books/112/book.pdf"
         },
@@ -203,6 +267,7 @@
             "title": { "en": "Metro 2034", "ru": "Метро 2034", "uz": "Metro 2034" },
             "author": { "en": "Dmitry Glukhovsky", "ru": "Дмитрий Алексеевич Глуховский", "uz": "Dmitriy Gluxovskiy" },
             "category": "fiction",
+            "subscribe": true,
             "cover": "./assets/books/113/cover.avif",
             "pdf": "./assets/books/113/book.pdf"
         },
@@ -211,6 +276,7 @@
             "title": { "en": "A Mint Fairy Tale", "ru": "Мятная сказка", "uz": "Yalpizli ertak" },
             "author": { "en": "Alexander Polyarny", "ru": "Александр Полярный", "uz": "Aleksandr Polyarnyy" },
             "category": "fiction",
+            "subscribe": true,
             "cover": "./assets/books/115/cover.avif",
             "pdf": "./assets/books/115/book.pdf"
         }

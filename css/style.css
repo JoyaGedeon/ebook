@@ -871,13 +871,20 @@ body {
     height: 100%;
 }
 
+
+.library-swiper .carousel-content {
+    flex: 1;
+} 
+
 .news-swiper .carousel-content, .recommended-swiper .carousel-content {
     padding: 0.8rem 0;
 }
 
 .news-swiper .carousel-img, .recommended-swiper .carousel-img {
-    height: 100% !important;
-    width: auto;
+    height: 270px;
+    opacity: 0.9;
+    width: 100%;
+    object-fit: cover;
 }
 
 .recommended-swiper .carousel-content {

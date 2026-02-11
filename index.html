@@ -19,7 +19,7 @@
 
                 <nav class="header-nav">
                     <a href="#books" class="nav-link" data-i18n="booksTitle">Books</a>
-                    <a href="#news" class="nav-link" data-i18n="newsTitle">News</a>
+                    <a href="#news" class="nav-link" data-i18n="magazineTitle">Magazine</a>
                     <a href="#library" class="nav-link" data-i18n="libraryTitle">Library</a>
                     <a href="#recommended" class="nav-link" data-i18n="recommendedTitle">Recommended</a>
                 </nav>
@@ -44,7 +44,7 @@
 
         <div class="mobile-menu" id="mobileMenu">
             <a href="#books" class="mobile-menu-link" data-i18n="booksTitle">Books</a>
-            <a href="#news" class="mobile-menu-link" data-i18n="newsTitle">News</a>
+            <a href="#news" class="mobile-menu-link" data-i18n="magazineTitle">Magazine</a>
             <a href="#library" class="mobile-menu-link" data-i18n="libraryTitle">Library</a>
             <a href="#recommended" class="mobile-menu-link" data-i18n="recommendedTitle">Recommended</a>
         </div>
@@ -68,7 +68,7 @@
             <section class="portal-section news-section" id="news">
                 <div class="portal-inner">
                     <div class="section-header">
-                        <h3 data-i18n="newsTitle">News</h3>
+                        <h3 data-i18n="magazineTitle">News</h3>
                         <button class="btn-see-all anim" id="seeAllNewsBtn" data-i18n="seeAll">See All</button>
                     </div>
                     <div class="swiper section-swiper news-swiper">
@@ -206,6 +206,7 @@
 
             // See All / Show Less toggle for news
             document.getElementById('seeAllNewsBtn').addEventListener('click', () => {
+                if (!isLoggedIn()) { window.location.href = 'login.html'; return; }
                 const btn = document.getElementById('seeAllNewsBtn');
                 newsExpanded = !newsExpanded;
                 btn.textContent = newsExpanded ? t('showLess') : t('seeAll');
